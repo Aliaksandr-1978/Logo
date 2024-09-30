@@ -1,0 +1,110 @@
+
+  .post {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .post__text {
+    margin:0 20px;
+  
+  & h2,
+  &-homework h2 {
+    @include font (1.8rem, 1.5, 700, italic);
+    margin-bottom: .5rem;
+    padding-top: 5px ; 
+    text-align: center;
+    color: $black; 
+  }
+  &-homework h2 {
+    color: $white;
+  }
+  & p {
+    text-indent: 25px;
+    text-align: justify;
+  }
+}
+.title__text {
+  @include font (1.4rem, 1.2);
+    color: $color-text; 
+    text-indent: 20px;
+    text-align: justify;
+  }
+  .post__title,
+  .page__content-play h3 {
+    @include font (1.8rem, 1.2, 500);
+    color: $color-text; 
+    text-align: center;
+  }
+  .post__title-text {
+    @include font (1.4rem, 1.2, 400, italic);
+    color: $dark-black;
+    text-align: center;
+  }
+  .post__title-scroll,
+  .post__text-homework p {
+    @include font (1.2rem, 1.2);
+    text-indent: 25px;
+    text-align: justify;
+  }
+  .post__title-scroll {
+    color: $dark-black;
+  }
+  .post__text-homework {
+    margin-bottom: 2rem;
+  }
+  .post__text-homework p, 
+  .post__data-homework, 
+  .post__data-homework h3 {
+    color: $white;
+    opacity: .7;
+  }
+  .post__title-scroll:before {
+    content: "-- "; /* Добавляем в качестве маркера символ */
+   
+  }
+  .post__text h3,
+  .page__content-play h3 {
+    @include font (1.5rem, 1.5, 500);
+    color: $color-button;
+  }
+  .post__text p {
+    margin-bottom: 1rem;
+  }
+  .post__text img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .post__play {
+    @include font (1.5rem, 1.5, 500);
+    color: $color-button;
+    text-decoration: none;
+  }
+  
+  .interactive__content {
+    box-shadow: 0 15px 20px rgba(7, 143, 254, 0.8);
+    width: 800px;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+
+    &-title {
+      @include font (1.5rem, 1.5, 500, italic);
+        color: $black;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+&-play-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $red;
+}
+&-img a {
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+}
+}

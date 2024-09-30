@@ -1,0 +1,67 @@
+.page-article {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .article__header {
+    font-style: italic;
+  
+    &-text-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $red;
+    }
+    &-text {
+        @include font (1.2rem, 1.2, 400, italic);
+        text-indent: 25px;
+        text-align: justify;
+        color: $black;
+    }
+    & h2 {
+        @include font (1.8rem, 1.5, 500, italic);
+        margin-bottom: .5rem;
+        text-align: center;
+        color: $black; 
+    }
+}
+  .page__content {
+    margin-bottom: 20px;
+  
+  
+    &-title h2 {
+        @include font (1.8rem, 1.5, 500, italic);
+        margin-bottom: .5rem;
+        text-align: center;
+        color: $black; 
+    }
+    &-play {
+        list-style-type: none;
+        text-decoration: none;
+    }
+    &-img {
+        display: block;
+        width: 800px;
+        height: 300px;
+        max-width: 100%;
+        padding-bottom: 1rem;
+        margin: 0 auto 10px;
+        background-color: $border-fon;
+        padding: 1.5rem;
+        border-radius: 25px;
+        overflow: hidden; 
+    }
+    &-play-name {
+        @include font (1.5rem, 1.2, 700, italic);
+        color: $red;
+    }
+
+    &-play h3 {
+        @include font (1.8rem, 1.5, 500);
+        color:  $black; 
+        text-align: center;
+        color: $color-button;
+  }
+}
+  
+  

@@ -1,0 +1,91 @@
+
+.footer {
+    width: 100%;
+    height: 30px;
+    @include flex-around;
+    background-color: $color-text;
+    width: 100%;
+    height: auto;
+    margin-bottom: .5px;
+  }
+  .social {
+    @include font (1.2rem, 1.2);
+    width: 350px;
+    height: auto;
+    display: inline-block;
+    color: $color-data;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+    & li {
+        margin-top: 5px;
+      }
+      & li a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      & li p {
+        color: $white;
+      }
+      & li p::before {
+        content: '\260E';
+        margin-left: 10px;
+        margin-right: 10px;
+      
+      }
+      & li a:hover {
+        text-decoration: none;
+        color: $white;
+      }
+  }
+  .writer {
+    width: 350px;
+    height: auto;
+    margin: 20px 0;
+  }
+  .btn {
+    @include font (1.2rem, 1.1, 500);
+    display: inline-block;
+    vertical-align: top;
+    padding: 1em 1.2em;
+  
+  
+    background: $color-button;
+    border: none;
+    cursor: pointer;
+    border-radius: 3em;
+    text-decoration: none;
+  
+    font-family: inherit;
+
+    color: $white;
+    transition: background-color .2s linear;
+  
+    &--red {
+    background-color: $fon-button; 
+    box-shadow: 0px 7px 17px -10px rgba($fon-button, 0.9);
+    border-radius: 25px;
+    margin-left: 30%;
+  }
+  &--red:hover,
+  &--red:focus {
+    background-color: darken($fon-button, 5%);
+  }
+  &--blue {
+    background-color: $blue;
+    box-shadow: 0px 7px 17px -10px rgba($blue, 0.3);
+    border-radius: 25px;
+  }
+  &--blue:hover,
+  &--blue:focus {
+    background-color: darken($blue, 5%);
+  }
+  &--rounded {
+    border-radius: 0.41em;
+  }
+  &--sm {
+    padding: 0.5em 1em;
+  }
+}
+ 

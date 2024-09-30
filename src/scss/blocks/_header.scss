@@ -1,0 +1,134 @@
+.header{
+    max-width: 1650px;
+    margin-bottom: 15px;
+
+    &__main {
+        background-image: url(../images/fon-body-2.jpg);
+        background-size: 100%, 80%, contain; 
+    } 
+  
+    &__advice {
+        background-image: url(../images/fon-advice.png);
+        background-size: 100%, auto;
+    }
+    &__playroom {
+        background-image: url(../images/fon-playroom.png);
+        height: 100vh;
+        background-size: 100%, 80%, contain; 
+    } 
+    &__interactive {
+        background-image: url(../images/fon-interactive.png);
+        background-size: 100%;
+    }
+    &__homework {
+        max-height: 100vh;
+        background-image: url(../images/fon-homework.png);
+        background-size: 100%; 
+    } 
+    &__fon {
+        position: relative; 
+        @include flex-between;
+        width: 100%;
+        height: 650px;
+        background-image: url(../images/header-fon.png);
+    }
+    &__fon p {
+        @include font (32px, 1.2);
+        text-align: center;
+        width: 500px;
+        height: 100px;
+        font-family: 'Pacifico', cursive;
+        color: $white;
+        margin-top: 150px;
+        margin-left: 70px;
+        z-index: 3;
+    }
+    &__fon-name {
+        font-size: 36px;
+        color: $header-kids;
+    }
+    &__fon-title-def {
+        padding-top: 450px;
+    }
+    &__fon:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.4);
+        z-index: 1;
+    } 
+    &__fon-title-text {
+        @include font (1.5rem, 1.2, 700, italic);
+        color: $red;
+    }
+    
+  }
+    
+.header-nav {
+        height: 50px;
+        @include flex-between;
+        background-color: $dark-black;
+
+    &__advice {
+        height: 50px;
+        @include flex-between;
+    }
+}
+.nav__box {
+    width: 100px;
+  
+    &-logo {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+  }
+}
+
+.nav__menu {
+    width: 90%;
+    @include flex-around;
+    margin: 0 auto;
+
+    &-link {
+    display: flex;
+    align-items: center;
+}
+    &-item,
+    &-item-playroom {
+        // font-family: inherit;
+        font-size: 1.5rem;
+        text-decoration: uppercase ;
+        padding-right: 30px;
+        text-decoration: none;
+        list-style-type: none;
+        color: $dark-white;
+    }
+    &-item-advice {
+        font-size: 1.5rem;
+        text-decoration: uppercase ;
+        padding-right: 30px;
+        text-decoration: none;
+        list-style-type: none;
+        color: $dark-pink; 
+    }
+}
+
+
+
+ 
+  .article__header-text-title,
+  .page__content-play-name,
+  .text__title,
+  .interactive__content-play-name {
+    @include font (1.5rem, 1.2, 700, italic);
+    // font-size: 1.5rem;
+    // font-weight: bold;
+    color: $red;
+  }
+  
+  

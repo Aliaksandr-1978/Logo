@@ -1,0 +1,148 @@
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.task {
+  width: 70%;
+}
+.main-card {
+ @include flex-between;
+  height: auto;
+  margin: 1px 10px 10px 1px;
+}
+figure img {
+  width: 340px;
+  height: 280px;
+  margin: 10px 10px 10px 10px;
+}
+.card__description {
+  width: 600px;
+
+&-name {
+  @include font (1.4rem, 1.2, 700, italic);
+  padding: 10px 0;
+  text-align: center;
+  color: $color-text; 
+}
+&-text {
+  @include font (1.2rem, 1.2);
+  color: $color-text; 
+  text-indent: 20px;
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+}
+.card__footer {
+  margin-left: 10px;
+  margin-top: 5px;
+  @include flex-between;
+  align-items: center;
+  
+
+  &-data {
+  display: flex;
+  color: $color-data;
+  line-height: 1.2;
+}
+&-data a {
+  color: $color-data;
+  text-decoration: none;
+}
+&-data a:hover {
+  color: $color-data;
+  text-decoration: underline;
+}
+&-data-item {
+  @include font (1.2rem, 1.2);
+}
+&-data-item:not(:last-child):after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 1.5rem;
+  position: relative;
+  top: -2px;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+&-read {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: $blue;
+  text-decoration: none;
+}
+&-read:hover {
+  text-decoration: underline;
+}
+}
+  
+
+  // .grid {
+  //   display: grid;
+  //   grid-template-columns: repeat(5,290px);
+  //   grid-template-rows: repeat(3,310px);
+  //   grid-gap: 15px;
+  //   margin-bottom: 25px;
+   
+  
+  //  & > div:nth-child(1) {
+  //   grid-column-start: 1;
+  //   grid-column-end: 4;
+  //   grid-row-start: 1;
+  //   grid-row-end: 2;
+  //  }
+  //  & > div:nth-child(2) {
+  //   grid-row-start: 1;
+  //   grid-row-end: 3;
+  //  }
+  //  & > div:nth-child(3) {
+  //   grid-column-start: 1;
+  //   grid-column-end: 4;  
+  //  }
+  // }
+
+
+                      /* Aside */
+
+.aside {
+  width: 30%;
+}                      
+.profile {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  &__figure img {
+    display: block;
+    width: 300px;
+    height: 250px;
+    margin: 10px auto;
+  } 
+  & a {
+    @include font (1.5rem, 1.2, 700, italic);
+    text-align: center;
+    color: $color-text;
+    margin: 10px 0;
+    text-decoration: none;
+}
+&__prof {
+  @include font (1.3rem, 1.5, 300);
+  text-align: center;
+  margin-bottom: 5px;
+  color: $color-button;
+}
+&-text {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 15px;
+}
+&-text p {
+  @include font (1.4rem, 1.2, 400, italic);
+  color: $color-text; 
+  padding-top: 30px ;
+  text-align: center;
+}
+}

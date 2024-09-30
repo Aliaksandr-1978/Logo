@@ -1,0 +1,7 @@
+{
+    "liveSassCompile.settings.forceBaseDirectory": "",
+    "liveSassCompile.settings.compileOnWatch": true,
+    "liveSassCompile.settings.autoprefix": [
+    
+    ]
+}

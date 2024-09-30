@@ -1,0 +1,146 @@
+
+ dialog::backdrop {
+    background: rgba(0, 0, 0, .5);
+  }
+  .modal {
+    @include flex-center;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    padding: 1rem;
+    width: 100%;
+    max-width: 500px;
+    background-color: $color-text;
+    opacity: .7;
+  
+  &.show {
+    display: flex;
+  }
+  &__text {
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: $color-text;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 1rem; 
+  }
+  &__content {
+    position: relative; 
+    /* /* width: 100%;
+    max-width: 500px; */
+    padding: 3rem 3rem 2.5rem;
+    background-color: $color-text;
+    border-radius: 5px;
+    /* opacity: 1; */
+    box-shadow: 0 16px 18px rgba(0, 0, 0, .8); 
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__close {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: .5;
+  
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: transform .2s linear, opacity .2s linear;
+  } 
+  &__close:hover {
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+  &__footer {
+    @include flex-center;
+    width: 500px;  
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.2rem;
+    color: #B2B2B2;
+  }
+  &__footer li {
+    margin: 0 .5rem;
+  }
+  &__footer li a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  &__footer li a:hover {
+    text-decoration: none;
+  }
+}
+ /* Form */
+ .form {
+    max-width: 400px;
+    top: 0;
+  
+  &__group {
+     margin-bottom: 1.5rem;
+     position: relative;
+   }
+   &__control {
+     display: block;
+     width: 100%;
+     padding: .5rem .75rem;
+   
+     background: none;
+     border: none;
+     border-bottom: 1px solid $border-bottom;
+     border-radius: 0;
+     box-shadow: none;
+     font-family: inherit;
+     font-size: 1.4rem;
+     color:$white;
+   }
+   &__control:focus + .form__line {
+     width: 100%;
+   }
+   &__control::placeholder {
+     color:$white .2;
+   }
+   &__line {
+     width: 0;
+     height: 1px;
+   
+     background-color: $blue;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     z-index: 1;
+     transition: width .2s linear;
+   }
+   &__footer-center {
+     text-align: center;
+   }
+   &__footer-list {
+     display: flex;
+     justify-content: center;
+     font-size: 1.2rem;
+     line-height: 1.2;
+   }
+   &__footer-list li {
+     margin: 0.5rem;
+   }
+   &__footer-list li a {
+     color: $white;
+   }
+   &__control--textarea {
+     height: 30px;
+     overflow: hidden;
+     resize: none;
+   }
+   &__group--md{
+     margin-bottom: 2.5rem;
+   }
+}
